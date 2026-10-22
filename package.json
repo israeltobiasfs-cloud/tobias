@@ -1,0 +1,42 @@
+{
+  "name": "lar-em-dia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test tests/*.test.mjs",
+    "migrate": "node scripts/migrate.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israeltobiasfs-cloud/tobias.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/israeltobiasfs-cloud/tobias/issues"
+  },
+  "homepage": "https://github.com/israeltobiasfs-cloud/tobias#readme",
+  "dependencies": {
+    "@neondatabase/auth": "^0.7.0-beta",
+    "@neondatabase/serverless": "^1.2.0",
+    "lucide-react": "^1.61.0",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}
