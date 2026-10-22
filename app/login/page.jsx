@@ -4,7 +4,7 @@ import {authClient} from '../../lib/auth-client';
 import {ArrowRight,House,ShieldCheck,Sprout} from 'lucide-react';
 
 export default function Login(){
- const [mode,setMode]=useState('in'),[error,setError]=useState(''),[busy,setBusy]=useState(false);
+ const [mode,setMode]=useState('family'),[error,setError]=useState(''),[busy,setBusy]=useState(false);
  async function submit(e){
   e.preventDefault();setBusy(true);setError('');
   const f=new FormData(e.currentTarget);
