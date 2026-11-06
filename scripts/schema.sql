@@ -6,3 +6,6 @@ CREATE INDEX IF NOT EXISTS records_household ON records(household_id,kind);
 
 CREATE UNIQUE INDEX IF NOT EXISTS one_loan_per_household ON records(household_id) WHERE kind='loan';
 CREATE UNIQUE INDEX IF NOT EXISTS one_budget_per_category ON records(household_id,(data->>'month'),(data->>'category')) WHERE kind='budget';
+
+CREATE TABLE IF NOT EXISTS check_items(id uuid PRIMARY KEY,household_id uuid NOT NULL REFERENCES households(id),data jsonb NOT NULL,version integer NOT NULL DEFAULT 1,updated_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS check_items_household ON check_items(household_id);
