@@ -1,3 +1,3 @@
 import {auth} from '../../../../lib/auth';
-export async function GET(r){return auth().handler().GET(r)}
-export async function POST(r){return auth().handler().POST(r)}
+export async function GET(request,context){return auth().handler().GET(request,context)}
+export async function POST(request,context){return auth().handler().POST(request,context)}
